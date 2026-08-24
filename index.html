@@ -11,19 +11,27 @@
 <meta property="og:url" content="https://mostafamaarof.com/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Person",
   "name": "Mostafa Maarof",
+  "alternateName": "Mostafa Maarof Abdelhaleem Mahmoud",
   "url": "https://mostafamaarof.com/",
   "jobTitle": "Head of Audit Group",
   "worksFor": { "@type": "GovernmentOrganization", "name": "Accountability State Authority (ASA), Egypt" },
   "email": "mailto:contact@mostafamaarof.com",
   "sameAs": ["https://www.linkedin.com/in/mostafamaarof/"],
-  "knowsAbout": ["IT Audit", "AI Auditing", "IPSAS", "ISSAI", "Performance Audit", "SAP Audit", "Data Analytics"],
-  "hasCredential": ["CIA", "CISA", "AAIA", "CFE", "ACCA CertIPSAS"]
+  "knowsAbout": ["IT Audit", "AI Auditing", "AI Governance", "Cybersecurity Audit", "IPSAS", "ISSAI", "Performance Audit", "SAP Audit", "Data Analytics", "Cloud Computing Audit"],
+  "hasCredential": ["CIA", "CISA", "AAIA", "CFE", "ACCA CertIPSAS", "INTOSAI IDI Certified Trainer"],
+  "alumniOf": { "@type": "CollegeOrUniversity", "name": "Cairo University" },
+  "memberOf": [
+    { "@type": "Organization", "name": "Egyptian Society of Accountants & Auditors (ESAA)" },
+    { "@type": "Organization", "name": "ISACA" },
+    { "@type": "Organization", "name": "Institute of Internal Auditors (IIA)" },
+    { "@type": "Organization", "name": "Association of Certified Fraud Examiners (ACFE)" }
+  ]
 }
 </script>
 <style>
@@ -35,6 +43,7 @@
   --paper-2:#f2f3ec;
   --rule:#d8dcd0;
   --brass:#a8853c;
+  --brass-soft:#c9a75f;
   --muted:#5f6b63;
   --serif:"Fraunces", Georgia, serif;
   --sans:"Public Sans", -apple-system, Segoe UI, sans-serif;
@@ -42,49 +51,54 @@
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:16.5px;line-height:1.65;-webkit-font-smoothing:antialiased}
+body{
+  background:
+    radial-gradient(ellipse 900px 500px at 100% -10%, rgba(168,133,60,.07), transparent 60%),
+    var(--paper);
+  color:var(--ink);font-family:var(--sans);font-size:16.5px;line-height:1.65;-webkit-font-smoothing:antialiased}
 html[dir="rtl"] body{font-family:var(--arabic)}
 a{color:var(--ledger);text-decoration:none}
 a:hover{text-decoration:underline;text-underline-offset:3px}
 :focus-visible{outline:2px solid var(--brass);outline-offset:3px}
-.wrap{max-width:1060px;margin:0 auto;padding:0 24px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
 .eyebrow{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--brass)}
 html[dir="rtl"] .eyebrow{letter-spacing:0}
 h1,h2{font-family:var(--serif);font-weight:600;color:var(--ledger)}
 html[dir="rtl"] h1,html[dir="rtl"] h2{font-family:var(--arabic);font-weight:700}
-h2{font-size:clamp(24px,3.4vw,32px);line-height:1.2;margin:8px 0 26px}
-section{padding:64px 0;border-top:1px solid var(--rule)}
+h2{font-size:clamp(24px,3.4vw,32px);line-height:1.2;margin:8px 0 14px}
+.section-lead{font-size:15.5px;color:var(--muted);max-width:68ch;margin-bottom:30px}
+section{padding:68px 0;border-top:1px solid var(--rule);position:relative}
 
 /* ---------- top bar ---------- */
 header{position:sticky;top:0;z-index:20;background:rgba(251,251,248,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--rule)}
 .bar{display:flex;align-items:center;justify-content:space-between;height:62px}
 .mark{display:flex;align-items:center;gap:12px;font-weight:700;letter-spacing:.02em}
 .seal{width:34px;height:34px;border:1.5px solid var(--ledger);border-radius:50%;display:grid;place-items:center;font-family:var(--serif);font-size:14px;color:var(--ledger);background:radial-gradient(circle at 35% 30%, #ffffff 0%, var(--paper-2) 100%)}
-nav{display:flex;gap:22px;align-items:center;font-size:14.5px;font-weight:500}
+nav{display:flex;gap:20px;align-items:center;font-size:14px;font-weight:500}
 nav a{color:var(--ink)}
 .lang-btn{border:1px solid var(--ledger);background:transparent;color:var(--ledger);font:inherit;font-weight:700;font-size:13.5px;padding:6px 14px;border-radius:999px;cursor:pointer;transition:background .15s,color .15s}
 .lang-btn:hover{background:var(--ledger);color:var(--paper)}
-.nav-links{display:flex;gap:22px}
-@media(max-width:760px){.nav-links{display:none}}
+.nav-links{display:flex;gap:20px}
+@media(max-width:900px){.nav-links{display:none}}
 
 /* ---------- hero ---------- */
-.hero{padding:80px 0 66px;border-top:none;display:grid;grid-template-columns:1.5fr 1fr;gap:54px;align-items:start}
+.hero{padding:78px 0 64px;border-top:none;display:grid;grid-template-columns:1.5fr 1fr;gap:54px;align-items:start}
 @media(max-width:860px){.hero{grid-template-columns:1fr;gap:38px}}
-.hero h1{font-size:clamp(34px,5.4vw,56px);line-height:1.08;letter-spacing:-.01em;margin:16px 0 22px}
+.hero h1{font-size:clamp(33px,5.2vw,54px);line-height:1.08;letter-spacing:-.01em;margin:16px 0 22px}
 html[dir="rtl"] .hero h1{letter-spacing:0;line-height:1.25}
-.hero .lede{font-size:18px;color:var(--muted);max-width:52ch}
+.hero .lede{font-size:18px;color:var(--muted);max-width:54ch}
 .cred-line{margin-top:26px;display:flex;flex-wrap:wrap;gap:8px}
 .chip{font-size:12.5px;font-weight:700;letter-spacing:.06em;border:1px solid var(--rule);background:#fff;border-radius:4px;padding:5px 10px;color:var(--ledger)}
 html[dir="rtl"] .chip{letter-spacing:0}
 .hero-cta{margin-top:30px;display:flex;gap:14px;flex-wrap:wrap}
-.btn{display:inline-block;padding:12px 22px;border-radius:6px;font-weight:600;font-size:15px}
+.btn{display:inline-block;padding:12px 22px;border-radius:6px;font-weight:600;font-size:15px;transition:transform .15s,background .15s,box-shadow .15s}
 .btn-primary{background:var(--ledger);color:#fff}
-.btn-primary:hover{background:var(--ledger-soft);text-decoration:none}
+.btn-primary:hover{background:var(--ledger-soft);text-decoration:none;transform:translateY(-1px);box-shadow:0 6px 16px rgba(20,56,46,.22)}
 .btn-ghost{border:1px solid var(--ledger);color:var(--ledger)}
-.btn-ghost:hover{background:var(--paper-2);text-decoration:none}
+.btn-ghost:hover{background:var(--paper-2);text-decoration:none;transform:translateY(-1px)}
 
 /* record card */
-.record{border:1px solid var(--rule);border-top:3px solid var(--ledger);background:#fff;padding:26px 26px 8px;box-shadow:0 1px 0 var(--rule)}
+.record{border:1px solid var(--rule);border-top:3px solid var(--ledger);background:#fff;padding:26px 26px 8px;box-shadow:0 10px 30px -18px rgba(20,56,46,.35)}
 .record .rc-title{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);padding-bottom:14px;border-bottom:1px dashed var(--rule)}
 html[dir="rtl"] .record .rc-title{letter-spacing:0}
 .record dl{display:block}
@@ -94,9 +108,36 @@ html[dir="rtl"] .record .rc-title{letter-spacing:0}
 .record dd{font-family:var(--serif);font-size:20px;font-weight:600;color:var(--ledger);white-space:nowrap}
 html[dir="rtl"] .record dd{font-family:var(--arabic)}
 
+/* ---------- profile ---------- */
+.profile-body{font-size:16.5px;color:var(--ink);max-width:76ch}
+
+/* ---------- expertise chips ---------- */
+.chipcloud{display:flex;flex-wrap:wrap;gap:10px}
+.xchip{font-size:13px;font-weight:600;border:1px solid var(--rule);background:#fff;border-radius:999px;padding:9px 17px;color:var(--ledger);transition:border-color .15s,background .15s}
+.xchip:hover{border-color:var(--brass);background:var(--paper-2)}
+
+/* ---------- career timeline ---------- */
+.timeline{position:relative;border-inline-start:2px solid var(--rule);padding-inline-start:30px;display:flex;flex-direction:column;gap:46px}
+@media(max-width:600px){.timeline{padding-inline-start:22px}}
+.tl-item{position:relative}
+.tl-item::before{content:"";position:absolute;top:5px;inset-inline-start:-37px;width:12px;height:12px;border-radius:50%;background:var(--paper);border:2.5px solid var(--brass)}
+@media(max-width:600px){.tl-item::before{inset-inline-start:-27px}}
+.tl-period{font-size:12.5px;font-weight:700;letter-spacing:.08em;color:var(--brass);text-transform:uppercase}
+html[dir="rtl"] .tl-period{letter-spacing:0}
+.tl-item h3{font-family:var(--serif);font-weight:600;font-size:20px;color:var(--ledger);margin:6px 0 2px}
+html[dir="rtl"] .tl-item h3{font-family:var(--arabic);font-weight:700}
+.tl-org{font-size:14.5px;color:var(--muted);margin-bottom:12px}
+.tl-item ul{list-style:none;display:flex;flex-direction:column;gap:7px}
+.tl-item li{font-size:14.5px;color:var(--ink);padding-inline-start:17px;position:relative}
+html[dir="rtl"] .tl-item li{padding-inline-start:0;padding-inline-end:17px}
+.tl-item li::before{content:"—";position:absolute;inset-inline-start:0;color:var(--brass)}
+html[dir="rtl"] .tl-item li::before{inset-inline-start:auto;inset-inline-end:0}
+.tl-note{margin-top:12px;font-size:13.5px;color:var(--muted)}
+.tl-note a{font-weight:600}
+
 /* ---------- ledger ---------- */
 .ledger{border:1px solid var(--rule);background:#fff}
-.lrow{display:grid;grid-template-columns:96px 1fr 190px;gap:18px;padding:20px 24px;border-bottom:1px solid var(--rule);align-items:baseline}
+.lrow{display:grid;grid-template-columns:96px 1fr 190px;gap:18px;padding:20px 24px;border-bottom:1px solid var(--rule);align-items:baseline;transition:background .15s}
 .lrow:last-child{border-bottom:none}
 .lrow:hover{background:var(--paper-2)}
 .ref{font-size:12.5px;font-weight:700;letter-spacing:.08em;color:var(--brass)}
@@ -105,36 +146,79 @@ html[dir="rtl"] .ref{letter-spacing:0}
 html[dir="rtl"] .lrow h3{font-family:var(--arabic);font-weight:700}
 .lrow p{font-size:14.5px;color:var(--muted)}
 .years{font-size:13.5px;font-weight:600;color:var(--ink);text-align:end}
+html[dir="rtl"] .years{text-align:start}
 .status{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ledger);border:1px solid var(--ledger);border-radius:999px;padding:2px 9px;margin-inline-start:8px;vertical-align:2px}
 html[dir="rtl"] .status{letter-spacing:0}
 @media(max-width:700px){.lrow{grid-template-columns:1fr;gap:6px}.years{text-align:start}}
 
-/* ---------- contributions ---------- */
+/* ---------- achievements ---------- */
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+@media(max-width:860px){.grid3{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.grid3{grid-template-columns:1fr}}
+.ach{border:1px solid var(--rule);background:#fff;padding:24px;transition:transform .15s,box-shadow .15s}
+.ach:hover{transform:translateY(-3px);box-shadow:0 14px 28px -20px rgba(20,56,46,.4)}
+.ach .num{font-family:var(--serif);font-size:26px;color:var(--brass-soft);display:block;margin-bottom:10px}
+.ach p{font-size:14.5px;color:var(--ink)}
+
+/* ---------- contributions / grid2 (kept for possible reuse) ---------- */
 .grid2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
 @media(max-width:760px){.grid2{grid-template-columns:1fr}}
-.card{border:1px solid var(--rule);background:#fff;padding:24px}
+.card{border:1px solid var(--rule);background:#fff;padding:24px;transition:transform .15s,box-shadow .15s}
+.card:hover{transform:translateY(-3px);box-shadow:0 14px 28px -20px rgba(20,56,46,.4)}
 .card .tag{font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--brass)}
 html[dir="rtl"] .card .tag{letter-spacing:0}
 .card h3{font-family:var(--serif);font-weight:600;font-size:19px;color:var(--ledger);margin:8px 0 8px;line-height:1.35}
 html[dir="rtl"] .card h3{font-family:var(--arabic);font-weight:700}
 .card p{font-size:14.5px;color:var(--muted)}
 
+/* ---------- speaking list ---------- */
+.splist{display:flex;flex-direction:column}
+.sp-item{display:grid;grid-template-columns:112px 1fr;gap:20px;padding:20px 0;border-bottom:1px solid var(--rule)}
+.sp-item:last-child{border-bottom:none}
+.sp-year{font-family:var(--serif);font-size:19px;color:var(--ledger);font-weight:600;white-space:nowrap}
+html[dir="rtl"] .sp-year{font-family:var(--arabic)}
+.sp-tag{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--brass);display:block;margin-bottom:5px}
+html[dir="rtl"] .sp-tag{letter-spacing:0}
+.sp-item h3{font-family:var(--serif);font-weight:600;font-size:17.5px;color:var(--ledger);margin-bottom:5px;line-height:1.35}
+html[dir="rtl"] .sp-item h3{font-family:var(--arabic);font-weight:700}
+.sp-item p{font-size:14px;color:var(--muted)}
+@media(max-width:600px){.sp-item{grid-template-columns:1fr;gap:4px}}
+
 /* ---------- credentials ---------- */
 .creds{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 @media(max-width:760px){.creds{grid-template-columns:1fr 1fr}}
 @media(max-width:480px){.creds{grid-template-columns:1fr}}
-.cred{border:1px solid var(--rule);background:#fff;padding:20px;position:relative}
+.cred{border:1px solid var(--rule);background:#fff;padding:20px;position:relative;transition:transform .15s,box-shadow .15s}
+.cred:hover{transform:translateY(-3px);box-shadow:0 14px 28px -20px rgba(20,56,46,.4)}
 .cred b{font-family:var(--serif);font-size:20px;color:var(--ledger);display:block}
 html[dir="rtl"] .cred b{font-family:var(--arabic)}
 .cred span{font-size:13.5px;color:var(--muted);display:block;margin-top:4px}
 .cred .yr{position:absolute;top:16px;inset-inline-end:16px;font-size:12px;font-weight:700;color:var(--brass)}
 
+.subgrid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:36px}
+@media(max-width:700px){.subgrid{grid-template-columns:1fr}}
+.subcard{border:1px solid var(--rule);background:#fff;padding:22px}
+.subcard h4{font-family:var(--serif);font-weight:600;font-size:15.5px;color:var(--brass);text-transform:uppercase;letter-spacing:.08em;margin-bottom:16px}
+html[dir="rtl"] .subcard h4{font-family:var(--arabic);font-weight:700;letter-spacing:0}
+.subcard .ed-item{margin-bottom:14px}
+.subcard .ed-item:last-child{margin-bottom:0}
+.subcard .ed-item b{display:block;font-family:var(--serif);font-size:15.5px;color:var(--ledger);font-weight:600}
+html[dir="rtl"] .subcard .ed-item b{font-family:var(--arabic);font-weight:700}
+.subcard .ed-item span{font-size:13.5px;color:var(--muted)}
+.pd-block{margin-top:32px}
+.pd-block h4{font-family:var(--serif);font-weight:600;font-size:15.5px;color:var(--brass);text-transform:uppercase;letter-spacing:.08em;margin-bottom:14px}
+html[dir="rtl"] .pd-block h4{font-family:var(--arabic);font-weight:700;letter-spacing:0}
+.pd-tags{display:flex;flex-wrap:wrap;gap:9px}
+.pd-tag{font-size:12.5px;border:1px dashed var(--rule);border-radius:4px;padding:6px 11px;color:var(--muted)}
+.lang-line{margin-top:28px;font-size:14px;color:var(--muted)}
+.lang-line b{color:var(--ink);font-weight:600}
+
 /* ---------- training list ---------- */
 .tlist{list-style:none}
-.tlist li{padding:16px 0;border-bottom:1px dashed var(--rule);display:flex;justify-content:space-between;gap:20px;align-items:baseline}
+.tlist li{padding:18px 0;border-bottom:1px dashed var(--rule);display:flex;justify-content:space-between;gap:20px;align-items:baseline}
 .tlist li:last-child{border-bottom:none}
 .tlist .t-name{font-weight:600}
-.tlist .t-aud{font-size:14px;color:var(--muted)}
+.tlist .t-aud{font-size:14px;color:var(--muted);margin-top:2px}
 .tlist .t-when{font-size:13px;color:var(--brass);font-weight:700;white-space:nowrap}
 @media(max-width:600px){.tlist li{flex-direction:column;gap:2px}}
 
@@ -145,8 +229,13 @@ html[dir="rtl"] .cred b{font-family:var(--arabic)}
 .contact a{color:#fff;text-decoration:underline;text-underline-offset:4px}
 .contact .big{font-family:var(--serif);font-size:clamp(20px,3vw,28px)}
 html[dir="rtl"] .contact .big{font-family:var(--arabic)}
+.contact .loc{margin-top:10px;color:#b9c6bd;font-size:14.5px}
 footer{padding:26px 0;font-size:13px;color:var(--muted);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
-@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+
+/* ---------- reveal-on-scroll ---------- */
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}}
 </style>
 </head>
 <body>
@@ -156,10 +245,11 @@ footer{padding:26px 0;font-size:13px;color:var(--muted);display:flex;justify-con
     <div class="mark"><span class="seal">MM</span><span data-i18n="name">Mostafa Maarof</span></div>
     <nav>
       <div class="nav-links">
+        <a href="#career" data-i18n="nav_cx">Career</a>
         <a href="#engagements" data-i18n="nav_eng">Engagements</a>
-        <a href="#contributions" data-i18n="nav_con">INTOSAI</a>
-        <a href="#credentials" data-i18n="nav_cred">Credentials</a>
+        <a href="#speaking" data-i18n="nav_con">Speaking</a>
         <a href="#training" data-i18n="nav_tr">Training</a>
+        <a href="#credentials" data-i18n="nav_cred">Credentials</a>
         <a href="#contact" data-i18n="nav_ct">Contact</a>
       </div>
       <button class="lang-btn" id="langToggle" aria-label="Switch language">العربية</button>
@@ -189,18 +279,90 @@ footer{padding:26px 0;font-size:13px;color:var(--muted);display:flex;justify-con
       <div class="row"><dt data-i18n="rc_2">International organizations audited</dt><dd>3</dd></div>
       <div class="row"><dt data-i18n="rc_3">INTOSAI guidelines co-authored</dt><dd>2</dd></div>
       <div class="row"><dt data-i18n="rc_4">Public-sector banks — IT audit</dt><dd>12</dd></div>
-      <div class="row"><dt data-i18n="rc_5">SAIs trained across regions</dt><dd>18+</dd></div>
+      <div class="row"><dt data-i18n="rc_5">Training programs delivered</dt><dd>8</dd></div>
     </dl>
   </aside>
 </div>
 
+<!-- PROFILE -->
+<section id="profile">
+  <div class="wrap">
+    <div class="eyebrow reveal" data-i18n="pr_eyebrow">Profile</div>
+    <h2 class="reveal" data-i18n="pr_title">A career built on the ledger — and now on the models behind it.</h2>
+    <p class="profile-body reveal" data-i18n="pr_body">Supreme Audit Institution leader with 19+ years spanning external audit of United Nations and international organizations, IT and AI audit, cybersecurity, and ISSAI-based performance audit. I currently serve on the external audit team of the Food and Agriculture Organization (FAO), and previously audited UNIDO and the African Union Commission — co-authoring INTOSAI's guidance on auditing Artificial Intelligence solutions and cloud computing along the way. As a certified INTOSAI Development Initiative (IDI) trainer, I design and deliver capacity-building programs for Supreme Audit Institutions across Africa and the Arab region, and speak regularly at INTOSAI, EUROSAI and ARABOSAI forums on AI audit, big data and digital transformation.</p>
+
+    <div style="margin-top:34px">
+      <div class="eyebrow reveal" data-i18n="xp_eyebrow">Core expertise</div>
+      <div class="chipcloud" style="margin-top:14px">
+        <span class="xchip reveal" data-i18n="xp_1">IT Audit & ITGC</span>
+        <span class="xchip reveal" data-i18n="xp_2">AI Governance & Model Risk</span>
+        <span class="xchip reveal" data-i18n="xp_3">Cybersecurity Audit</span>
+        <span class="xchip reveal" data-i18n="xp_4">SAP ERP & Application Controls</span>
+        <span class="xchip reveal" data-i18n="xp_5">IT Governance (COBIT)</span>
+        <span class="xchip reveal" data-i18n="xp_6">ISSAI Performance & Compliance Audit</span>
+        <span class="xchip reveal" data-i18n="xp_7">IPSAS Financial Audit</span>
+        <span class="xchip reveal" data-i18n="xp_8">Fraud Risk Management</span>
+        <span class="xchip reveal" data-i18n="xp_9">Data Analytics — Power BI · Python · SQL</span>
+        <span class="xchip reveal" data-i18n="xp_10">Digital Transformation Assurance</span>
+        <span class="xchip reveal" data-i18n="xp_11">Banking-Sector IT Audit</span>
+        <span class="xchip reveal" data-i18n="xp_12">Enterprise Risk & Internal Controls</span>
+        <span class="xchip reveal" data-i18n="xp_13">Risk-Based Audit Planning</span>
+        <span class="xchip reveal" data-i18n="xp_14">Information Security Governance</span>
+        <span class="xchip reveal" data-i18n="xp_15">Capacity Building & Training</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CAREER -->
+<section id="career">
+  <div class="wrap">
+    <div class="eyebrow reveal" data-i18n="cx_eyebrow">Career</div>
+    <h2 class="reveal" data-i18n="cx_title">Professional experience</h2>
+    <div class="timeline">
+      <div class="tl-item reveal">
+        <div class="tl-period" data-i18n="cx1_period">Dec 2019 – Present</div>
+        <h3 data-i18n="cx1_role">Head of Audit Group</h3>
+        <div class="tl-org" data-i18n="cx1_org">Accountability State Authority (ASA) — Egypt's Supreme Audit Institution, Cairo</div>
+        <ul>
+          <li data-i18n="cx1_b1">Leading external audit engagements for United Nations and international organizations (FAO, UNIDO, African Union Commission) under IPSAS and ISSAI frameworks.</li>
+          <li data-i18n="cx1_b2">Directing IT audit programs across 12 public-sector banks, evaluating IT general controls and SAP application controls.</li>
+          <li data-i18n="cx1_b3">Leading performance and compliance audits of national land-reclamation projects and public agencies, mapped to SDGs 2, 7, 9 and 15.</li>
+          <li data-i18n="cx1_b4">Drafted the technical and financial proposals supporting ASA's appointment as external auditor of international organizations.</li>
+        </ul>
+        <p class="tl-note" data-i18n="cx1_note">Full record of international engagements below ↓ — see <a href="#engagements">Engagements</a>.</p>
+      </div>
+      <div class="tl-item reveal">
+        <div class="tl-period" data-i18n="cx2_period">Mar 2014 – Nov 2019</div>
+        <h3 data-i18n="cx2_role">Internal Audit Supervisor</h3>
+        <div class="tl-org" data-i18n="cx2_org">Shibh Al-Jazira Contracting Co. (SAJCO), Riyadh, Saudi Arabia</div>
+        <ul>
+          <li data-i18n="cx2_b1">Directed end-to-end audits across finance, procurement, projects, HR and IT, identifying fiscal, operational, compliance and reputational risks.</li>
+          <li data-i18n="cx2_b2">Proposed revised debit procedures that cut the bad-debt ratio by 70%; designed a car-procurement policy eliminating SAR 3M in expenses.</li>
+          <li data-i18n="cx2_b3">Spearheaded the separation of the special-services division, reversing a SAR 0.9M loss (2016) onto a profitability path that reached SAR 8M by 2020.</li>
+          <li data-i18n="cx2_b4">Assessed ERP controls and supported implementation; advised on VAT compliance and warehouse-system integration that reduced stagnant stock by 5%.</li>
+        </ul>
+      </div>
+      <div class="tl-item reveal">
+        <div class="tl-period" data-i18n="cx3_period">Nov 2006 – Mar 2013</div>
+        <h3 data-i18n="cx3_role">Senior Auditor</h3>
+        <div class="tl-org" data-i18n="cx3_org">Accountability State Authority (ASA), Cairo, Egypt</div>
+        <ul>
+          <li data-i18n="cx3_b1">Performed performance and compliance audits of 12 public-sector electricity, gas and petroleum companies.</li>
+          <li data-i18n="cx3_b2">Analyzed financial statements and records to identify risks and improvement opportunities.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ENGAGEMENTS LEDGER -->
 <section id="engagements">
   <div class="wrap">
-    <div class="eyebrow" data-i18n="e_eyebrow">Engagement index</div>
-    <h2 data-i18n="e_title">External audit of international organizations</h2>
+    <div class="eyebrow reveal" data-i18n="e_eyebrow">Engagement index</div>
+    <h2 class="reveal" data-i18n="e_title">External audit of international organizations</h2>
     <div class="ledger">
-      <div class="lrow">
+      <div class="lrow reveal">
         <span class="ref">ENG-01</span>
         <div>
           <h3><span data-i18n="e1_name">Food and Agriculture Organization of the UN (FAO)</span><span class="status" data-i18n="e1_status">Incoming</span></h3>
@@ -208,15 +370,15 @@ footer{padding:26px 0;font-size:13px;color:var(--muted);display:flex;justify-con
         </div>
         <span class="years" data-i18n="e1_years">from FY 2026</span>
       </div>
-      <div class="lrow">
+      <div class="lrow reveal">
         <span class="ref">ENG-02</span>
         <div>
           <h3 data-i18n="e2_name">United Nations Industrial Development Organization (UNIDO)</h3>
-          <p data-i18n="e2_desc">Led IT audits (ITGC, SAP application controls), audit assessments of AI initiatives, IPSAS financial statement audit, and performance audits across UNIDO projects, Vienna.</p>
+          <p data-i18n="e2_desc">Led IT audits (ITGC, SAP application controls), audit assessments of AI initiatives, IPSAS financial statement audit, and performance audits across UNIDO projects, including special audits of GEF projects and the Major Repair & Replacement Fund, Vienna.</p>
         </div>
         <span class="years" data-i18n="e2_years">FY 2024–2025</span>
       </div>
-      <div class="lrow">
+      <div class="lrow reveal">
         <span class="ref">ENG-03</span>
         <div>
           <h3 data-i18n="e3_name">African Union Commission (AUC)</h3>
@@ -224,7 +386,7 @@ footer{padding:26px 0;font-size:13px;color:var(--muted);display:flex;justify-con
         </div>
         <span class="years" data-i18n="e3_years">FY 2022</span>
       </div>
-      <div class="lrow">
+      <div class="lrow reveal">
         <span class="ref">ENG-04</span>
         <div>
           <h3 data-i18n="e4_name">Public-sector banks & national projects — Egypt</h3>
@@ -236,64 +398,126 @@ footer{padding:26px 0;font-size:13px;color:var(--muted);display:flex;justify-con
   </div>
 </section>
 
-<!-- INTOSAI CONTRIBUTIONS -->
-<section id="contributions">
+<!-- ACHIEVEMENTS -->
+<section id="achievements">
   <div class="wrap">
-    <div class="eyebrow" data-i18n="c_eyebrow">INTOSAI & regional bodies</div>
-    <h2 data-i18n="c_title">International contributions</h2>
-    <div class="grid2">
-      <div class="card">
-        <div class="tag" data-i18n="c1_tag">Co-authored guideline · WGITA</div>
-        <h3 data-i18n="c1_title">Use and Review of Artificial Intelligence Solutions</h3>
-        <p data-i18n="c1_desc">INTOSAI Working Group on IT Audit guidance on auditing AI systems in government — governance, model risk, data integrity. 2023–2025.</p>
-      </div>
-      <div class="card">
-        <div class="tag" data-i18n="c2_tag">Co-authored guideline · WGITA</div>
-        <h3 data-i18n="c2_title">Reviewing Cloud Computing</h3>
-        <p data-i18n="c2_desc">INTOSAI Working Group on IT Audit guidance for SAIs auditing cloud environments and delivery models. 2023–2025.</p>
-      </div>
-      <div class="card">
-        <div class="tag" data-i18n="c3_tag">Speaker · WGBD, Vietnam 2024</div>
-        <h3 data-i18n="c3_title">Enhancing ASA's Data Management Strategy</h3>
-        <p data-i18n="c3_desc">Presented at the 8th Annual Meeting of the INTOSAI Working Group on Big Data, Ninh Binh.</p>
-      </div>
-      <div class="card">
-        <div class="tag" data-i18n="c4_tag">Speaker · WGBD, Cairo 2023</div>
-        <h3 data-i18n="c4_title">Auditing E-Commerce in a Big Data Environment</h3>
-        <p data-i18n="c4_desc">Presented at the 7th Annual Meeting of the INTOSAI Working Group on Big Data. Also: contributor to ARABOSAI's comprehensive IT audit guidelines; observer, 13th ASOSAI research project on remote audit.</p>
-      </div>
+    <div class="eyebrow reveal" data-i18n="ac_eyebrow">Selected achievements</div>
+    <h2 class="reveal" data-i18n="ac_title">Results, not just responsibilities</h2>
+    <div class="grid3">
+      <div class="ach reveal"><span class="num">01</span><p data-i18n="ac1">Recovered hundreds of acres of state land by enforcing land-allocation terms and collected EGP 100M+ in overdue balances.</p></div>
+      <div class="ach reveal"><span class="num">02</span><p data-i18n="ac2">Presented audit findings at 40+ annual meetings attended by ministers and senior leadership; authored annual sectoral reports submitted to Parliament and the Presidency.</p></div>
+      <div class="ach reveal"><span class="num">03</span><p data-i18n="ac3">Drafted the technical and financial proposals that supported ASA's appointment as external auditor of three international organizations.</p></div>
+      <div class="ach reveal"><span class="num">04</span><p data-i18n="ac4">Led IT audit engagements across 12 public-sector banks, strengthening IT general control and application-control environments.</p></div>
+      <div class="ach reveal"><span class="num">05</span><p data-i18n="ac5">Authored scientific and instructional content for EUROSAI's international e-learning program on auditing AI in the public sector.</p></div>
+      <div class="ach reveal"><span class="num">06</span><p data-i18n="ac6">Represented Egypt's experience at INTOSAI, EUROSAI and ARABOSAI international conferences and technical forums.</p></div>
     </div>
   </div>
 </section>
 
-<!-- CREDENTIALS -->
-<section id="credentials">
+<!-- SPEAKING / INTOSAI CONTRIBUTIONS -->
+<section id="speaking">
   <div class="wrap">
-    <div class="eyebrow" data-i18n="cr_eyebrow">Certifications</div>
-    <h2 data-i18n="cr_title">Credentials</h2>
-    <div class="creds">
-      <div class="cred"><span class="yr">2025</span><b>AAIA</b><span data-i18n="cr1">ISACA Advanced in AI Audit</span></div>
-      <div class="cred"><span class="yr">2024</span><b>CertIPSAS</b><span data-i18n="cr2">ACCA Certificate in IPSAS</span></div>
-      <div class="cred"><span class="yr">2021</span><b>CISA</b><span data-i18n="cr3">Certified Information Systems Auditor, ISACA</span></div>
-      <div class="cred"><span class="yr">2021</span><b data-i18n="cr4b">IDI ToT</b><span data-i18n="cr4">Certified Trainer, INTOSAI Development Initiative</span></div>
-      <div class="cred"><span class="yr">2020</span><b>CFE</b><span data-i18n="cr5">Certified Fraud Examiner, ACFE</span></div>
-      <div class="cred"><span class="yr">2019</span><b>CIA</b><span data-i18n="cr6">Certified Internal Auditor, IIA</span></div>
+    <div class="eyebrow reveal" data-i18n="c_eyebrow">INTOSAI, EUROSAI & ARABOSAI</div>
+    <h2 class="reveal" data-i18n="c_title">International contributions & speaking</h2>
+    <div class="splist">
+      <div class="sp-item reveal">
+        <span class="sp-year">2026</span>
+        <div><span class="sp-tag" data-i18n="c1_tag">Speaker · EUROSAI IT Working Group e-Seminar</span><h3 data-i18n="c1_title">From Data to Findings: Shortcuts for Audit Efficiency</h3><p data-i18n="c1_desc">Presented ASA's use of national digital platforms to raise audit efficiency, representing the ARABOSAI region before an international audience.</p></div>
+      </div>
+      <div class="sp-item reveal">
+        <span class="sp-year">2026</span>
+        <div><span class="sp-tag" data-i18n="c2_tag">Speaker · ARABOSAI Scientific Forum, Hammamet, Tunisia</span><h3 data-i18n="c2_title">Readiness of Supreme Audit Institutions to Leverage Big Data and AI</h3><p data-i18n="c2_desc">Presented at the "Spring Technology" forum — strategies, challenges and opportunities for AI adoption in public-sector auditing.</p></div>
+      </div>
+      <div class="sp-item reveal">
+        <span class="sp-year">2025</span>
+        <div><span class="sp-tag" data-i18n="c3_tag">Speaker · WGBD, Harbin, China</span><h3 data-i18n="c3_title">Implementing Artificial Intelligence in Audit Management Systems</h3><p data-i18n="c3_desc">Presented "Strategies and Challenges" at the 9th Annual Meeting of the INTOSAI Working Group on Big Data, representing ASA (SAI Egypt).</p></div>
+      </div>
+      <div class="sp-item reveal">
+        <span class="sp-year">2023–25</span>
+        <div><span class="sp-tag" data-i18n="c4_tag">Co-author · WGITA guidelines</span><h3 data-i18n="c4_title">Use and Review of Artificial Intelligence Solutions · Reviewing Cloud Computing</h3><p data-i18n="c4_desc">INTOSAI Working Group on IT Audit guidance for SAIs auditing AI systems and cloud environments — governance, model risk, data integrity.</p></div>
+      </div>
+      <div class="sp-item reveal">
+        <span class="sp-year">2024</span>
+        <div><span class="sp-tag" data-i18n="c5_tag">Speaker · WGBD, Ninh Binh, Vietnam</span><h3 data-i18n="c5_title">Enhancing ASA's Data Management Strategy</h3><p data-i18n="c5_desc">Presented at the 8th Annual Meeting of the INTOSAI Working Group on Big Data.</p></div>
+      </div>
+      <div class="sp-item reveal">
+        <span class="sp-year">2023</span>
+        <div><span class="sp-tag" data-i18n="c6_tag">Speaker · WGBD, Cairo, Egypt</span><h3 data-i18n="c6_title">Auditing E-Commerce in a Big Data Environment</h3><p data-i18n="c6_desc">Presented at the 7th Annual Meeting of the INTOSAI Working Group on Big Data.</p></div>
+      </div>
+      <div class="sp-item reveal">
+        <span class="sp-year">2022–23</span>
+        <div><span class="sp-tag" data-i18n="c7_tag">Contributor · ARABOSAI IT Audit Working Group</span><h3 data-i18n="c7_title">Comprehensive IT Audit Guidelines for Supreme Audit Institutions</h3><p data-i18n="c7_desc">Contributed to the development of ARABOSAI's regional IT audit guidance.</p></div>
+      </div>
+      <div class="sp-item reveal">
+        <span class="sp-year">—</span>
+        <div><span class="sp-tag" data-i18n="c8_tag">Observer · 13th ASOSAI Research Project</span><h3 data-i18n="c8_title">Remote Audit for SAIs: Future and Challenges</h3><p data-i18n="c8_desc">Participated in the international research initiative on remote audit practice.</p></div>
+      </div>
+      <div class="sp-item reveal">
+        <span class="sp-year">—</span>
+        <div><span class="sp-tag" data-i18n="c9_tag">Representative · Accountability State Authority (SAI Egypt)</span><h3 data-i18n="c9_title">INTOSAI Working Groups — WGITA, WGBD, WGISTA</h3><p data-i18n="c9_desc">Represents ASA at annual meetings, technical seminars, webinars and international research initiatives across the three working groups.</p></div>
+      </div>
     </div>
-    <p style="margin-top:18px;font-size:14px;color:var(--muted)" data-i18n="cr_note">Currently reading for an M.A. in Data Analytics & Artificial Intelligence. Member: ESAA (since 2014), ISACA, IIA, ACFE.</p>
   </div>
 </section>
 
 <!-- TRAINING -->
 <section id="training">
   <div class="wrap">
-    <div class="eyebrow" data-i18n="t_eyebrow">Capacity building</div>
-    <h2 data-i18n="t_title">Training delivered to audit institutions</h2>
+    <div class="eyebrow reveal" data-i18n="t_eyebrow">Capacity building · Certified INTOSAI IDI Trainer</div>
+    <h2 class="reveal" data-i18n="t_title">Training delivered to audit institutions</h2>
     <ul class="tlist">
-      <li><div><div class="t-name" data-i18n="t1">Corruption Prevention & Detection</div><div class="t-aud" data-i18n="t1a">ASA members, Cairo</div></div><span class="t-when" data-i18n="t1w">Nov 2024</span></li>
-      <li><div><div class="t-name" data-i18n="t2">Application Controls</div><div class="t-aud" data-i18n="t2a">Qatar State Audit Bureau & National Cyber Security Agency, Doha</div></div><span class="t-when" data-i18n="t2w">Sep 2024</span></li>
-      <li><div><div class="t-name" data-i18n="t3">Modern Information Systems Auditing Methods</div><div class="t-aud" data-i18n="t3a">Members of 16 Arab Supreme Audit Institutions, Cairo</div></div><span class="t-when" data-i18n="t3w">Jul 2024</span></li>
-      <li><div><div class="t-name" data-i18n="t4">Performance Audit Practices</div><div class="t-aud" data-i18n="t4a">South Sudan Audit Chamber</div></div><span class="t-when" data-i18n="t4w">Aug 2023</span></li>
+      <li class="reveal"><div><div class="t-name" data-i18n="t1">IT Audit</div><div class="t-aud" data-i18n="t1a">National Audit Office of Mauritius (remote) — three-day program covering ITGC, access management, change management, backup & recovery, incident response and application controls</div></div><span class="t-when" data-i18n="t1w">Aug 2026</span></li>
+      <li class="reveal"><div><div class="t-name" data-i18n="t2">Banking-Sector Cybersecurity</div><div class="t-aud" data-i18n="t2a">ARABOSAI Regional Banking Audit Programme (remote) — cybersecurity governance, threat landscape, digital-banking risk and regulatory requirements</div></div><span class="t-when" data-i18n="t2w">2026</span></li>
+      <li class="reveal"><div><div class="t-name" data-i18n="t3">AI Audit in the Public Sector</div><div class="t-aud" data-i18n="t3a">EUROSAI ITWG Research & Training Hub — subject-matter expert, content developer, scriptwriter and presenter for an international e-learning program</div></div><span class="t-when" data-i18n="t3w">2025–2026</span></li>
+      <li class="reveal"><div><div class="t-name" data-i18n="t4">Fraud Risk Management — COSO 2023 Framework</div><div class="t-aud" data-i18n="t4a">Accountability State Authority, Cairo — two-day workshop on governance, assessment, prevention, detection, investigation and corrective action</div></div><span class="t-when" data-i18n="t4w">Oct 2025</span></li>
+      <li class="reveal"><div><div class="t-name" data-i18n="t5">Corruption Prevention & Detection</div><div class="t-aud" data-i18n="t5a">ASA members, Cairo</div></div><span class="t-when" data-i18n="t5w">Nov 2024</span></li>
+      <li class="reveal"><div><div class="t-name" data-i18n="t6">Application Controls</div><div class="t-aud" data-i18n="t6a">Qatar State Audit Bureau & National Cyber Security Agency, Doha</div></div><span class="t-when" data-i18n="t6w">Sep 2024</span></li>
+      <li class="reveal"><div><div class="t-name" data-i18n="t7">Modern Information Systems Auditing Methods</div><div class="t-aud" data-i18n="t7a">Members of 16 Arab Supreme Audit Institutions, ARABOSAI, Cairo</div></div><span class="t-when" data-i18n="t7w">Jul 2024</span></li>
+      <li class="reveal"><div><div class="t-name" data-i18n="t8">Performance Audit Practices — ISSAI 300 / 3000</div><div class="t-aud" data-i18n="t8a">South Sudan National Audit Chamber</div></div><span class="t-when" data-i18n="t8w">Aug 2022</span></li>
     </ul>
+  </div>
+</section>
+
+<!-- CREDENTIALS -->
+<section id="credentials">
+  <div class="wrap">
+    <div class="eyebrow reveal" data-i18n="cr_eyebrow">Certifications</div>
+    <h2 class="reveal" data-i18n="cr_title">Credentials</h2>
+    <div class="creds">
+      <div class="cred reveal"><span class="yr">2025</span><b>AAIA</b><span data-i18n="cr1">ISACA Advanced in AI Audit</span></div>
+      <div class="cred reveal"><span class="yr">2024</span><b>CertIPSAS</b><span data-i18n="cr2">ACCA Certificate in IPSAS</span></div>
+      <div class="cred reveal"><span class="yr">2021</span><b>CISA</b><span data-i18n="cr3">Certified Information Systems Auditor, ISACA</span></div>
+      <div class="cred reveal"><span class="yr">2021</span><b data-i18n="cr4b">IDI ToT</b><span data-i18n="cr4">Certified Trainer, INTOSAI Development Initiative</span></div>
+      <div class="cred reveal"><span class="yr">2020</span><b>CFE</b><span data-i18n="cr5">Certified Fraud Examiner, ACFE</span></div>
+      <div class="cred reveal"><span class="yr">2019</span><b>CIA</b><span data-i18n="cr6">Certified Internal Auditor, IIA</span></div>
+    </div>
+
+    <div class="subgrid">
+      <div class="subcard reveal">
+        <h4 data-i18n="ed_title">Education</h4>
+        <div class="ed-item"><b data-i18n="ed1_degree">M.A., Data Analytics & Artificial Intelligence (in progress)</b><span data-i18n="ed1_school">Steinbeis University, Germany</span></div>
+        <div class="ed-item"><b data-i18n="ed2_degree">B.Com., Accounting & Auditing</b><span data-i18n="ed2_school">Faculty of Commerce, Cairo University, 2005 — Very Good with Honours</span></div>
+      </div>
+      <div class="subcard reveal">
+        <h4 data-i18n="mem_title">Professional Memberships</h4>
+        <div class="ed-item"><span data-i18n="mem_body">Egyptian Society of Accountants & Auditors — ESAA (since 2014) · ISACA · Institute of Internal Auditors (IIA) · Association of Certified Fraud Examiners (ACFE)</span></div>
+      </div>
+    </div>
+
+    <div class="pd-block">
+      <h4 class="reveal" data-i18n="rpd_title">Recent professional development</h4>
+      <div class="pd-tags">
+        <span class="pd-tag reveal" data-i18n="rpd1">Data Analytics & Microsoft Copilot — AFISI, 2026</span>
+        <span class="pd-tag reveal" data-i18n="rpd2">AI Ambassadors Program — National Telecommunication Institute, 2026</span>
+        <span class="pd-tag reveal" data-i18n="rpd3">Generative AI in Finance — CFTE & Egyptian Banking Institute, 2024–25</span>
+        <span class="pd-tag reveal" data-i18n="rpd4">E-Government Auditing — General Court of Audit, Saudi Arabia, 2023</span>
+        <span class="pd-tag reveal" data-i18n="rpd5">Audit & Data Analytics with Excel and Power BI — ASA, 2023</span>
+        <span class="pd-tag reveal" data-i18n="rpd6">SAP System Auditing — EgyptAir Training Academy, 2022</span>
+        <span class="pd-tag reveal" data-i18n="rpd7">SAP FI Consultant — SAP Egypt, 2021</span>
+      </div>
+    </div>
+
+    <p class="lang-line reveal"><b data-i18n="lang_title">Languages —</b> <span data-i18n="lang_body">Arabic (native) · English (professional fluency)</span></p>
   </div>
 </section>
 
@@ -304,6 +528,7 @@ footer{padding:26px 0;font-size:13px;color:var(--muted);display:flex;justify-con
     <h2 data-i18n="ct_title">Assurance, advisory, or capacity building — let's talk.</h2>
     <p class="big"><a href="mailto:contact@mostafamaarof.com">contact@mostafamaarof.com</a></p>
     <p style="margin-top:14px"><a href="https://www.linkedin.com/in/mostafamaarof/">linkedin.com/in/mostafamaarof</a></p>
+    <p class="loc" data-i18n="ct_loc">Based in Cairo, Egypt — engagements across Vienna, Rome and the wider region.</p>
   </div>
 </section>
 </main>
@@ -316,21 +541,66 @@ footer{padding:26px 0;font-size:13px;color:var(--muted);display:flex;justify-con
 <script>
 const AR = {
   name:"مصطفى معروف",
-  nav_eng:"التكليفات", nav_con:"الإنتوساي", nav_cred:"الشهادات", nav_tr:"التدريب", nav_ct:"تواصل",
+  nav_cx:"المسيرة المهنية", nav_eng:"التكليفات", nav_con:"المشاركات الدولية", nav_cred:"الشهادات", nav_tr:"التدريب", nav_ct:"تواصل",
   h_eyebrow:"الجهاز الأعلى للرقابة · مصر",
   h_title:"أراجع الأنظمة التي يقوم عليها القطاع العام — بما فيها الذكية.",
   h_lede:"أنا مصطفى معروف، رئيس مجموعة مراجعة بالجهاز المركزي للمحاسبات المصري (ASA)، ومراجع خارجي لمنظمات الأمم المتحدة والمنظمات الدولية. شاركت في تأليف إرشادات الإنتوساي الدولية حول مراجعة حلول الذكاء الاصطناعي والحوسبة السحابية.",
   chip_idi:"مدرب معتمد IDI",
   cta_contact:"تواصل معي", cta_li:"لينكدإن",
   rc_title:"السجل",
-  rc_1:"سنوات الخبرة الرقابية", rc_2:"منظمات دولية خضعت للمراجعة", rc_3:"إرشادات إنتوساي شارك في تأليفها", rc_4:"بنوك حكومية — مراجعة تكنولوجيا المعلومات", rc_5:"أجهزة رقابية تلقّت تدريبه",
+  rc_1:"سنوات الخبرة الرقابية", rc_2:"منظمات دولية خضعت للمراجعة", rc_3:"إرشادات إنتوساي شارك في تأليفها", rc_4:"بنوك حكومية — مراجعة تكنولوجيا المعلومات", rc_5:"برامج تدريبية قدّمها",
+
+  pr_eyebrow:"الملف التنفيذي",
+  pr_title:"مسيرة مهنية بُنيت على دفتر الحسابات — وتمتد الآن إلى النماذج التي تقف خلفه.",
+  pr_body:"رئيس مجموعة مراجعة يتمتع بخبرة تزيد على 19 عامًا في المراجعة الخارجية لمنظمات الأمم المتحدة والمنظمات الدولية، ومراجعة تكنولوجيا المعلومات والذكاء الاصطناعي، والأمن السيبراني، ورقابة الأداء وفق معايير الإنتوساي. أشغل حاليًا عضوية فريق المراجعة الخارجية لمنظمة الأغذية والزراعة للأمم المتحدة (الفاو)، وشاركت سابقًا في المراجعة الخارجية لليونيدو ومفوضية الاتحاد الأفريقي — وشاركت في تأليف إرشادات الإنتوساي حول مراجعة حلول الذكاء الاصطناعي والحوسبة السحابية. وبصفتي مدربًا معتمدًا من مبادرة الإنتوساي للتنمية (IDI)، أصمم وأنفذ برامج بناء القدرات للأجهزة العليا للرقابة في أفريقيا والمنطقة العربية، وأتحدث بانتظام في محافل الإنتوساي واليوروساي والأرابوساي حول مراجعة الذكاء الاصطناعي والبيانات الضخمة والتحول الرقمي.",
+
+  xp_eyebrow:"مجالات الخبرة الأساسية",
+  xp_1:"مراجعة تكنولوجيا المعلومات والضوابط العامة (ITGC)",
+  xp_2:"حوكمة الذكاء الاصطناعي ومخاطر النماذج",
+  xp_3:"مراجعة الأمن السيبراني",
+  xp_4:"أنظمة SAP ERP وضوابط التطبيقات",
+  xp_5:"حوكمة تكنولوجيا المعلومات (COBIT)",
+  xp_6:"رقابة الأداء والامتثال وفق معايير الإنتوساي",
+  xp_7:"الرقابة المالية وفق IPSAS",
+  xp_8:"إدارة مخاطر الاحتيال",
+  xp_9:"تحليل البيانات — Power BI · Python · SQL",
+  xp_10:"ضمان التحول الرقمي",
+  xp_11:"مراجعة تكنولوجيا المعلومات في القطاع المصرفي",
+  xp_12:"إدارة المخاطر المؤسسية وتقييم الرقابة الداخلية",
+  xp_13:"التخطيط الرقابي القائم على المخاطر",
+  xp_14:"حوكمة أمن المعلومات",
+  xp_15:"بناء القدرات والتدريب المهني",
+
+  cx_eyebrow:"المسيرة المهنية",
+  cx_title:"الخبرات المهنية",
+  cx1_period:"ديسمبر 2019 – حتى الآن",
+  cx1_role:"رئيس مجموعة مراجعة",
+  cx1_org:"الجهاز المركزي للمحاسبات (ASA) — الجهاز الأعلى للرقابة في مصر، القاهرة",
+  cx1_b1:"قيادة مهام المراجعة الخارجية لمنظمات الأمم المتحدة والمنظمات الدولية (الفاو، اليونيدو، مفوضية الاتحاد الأفريقي) وفق معياري IPSAS وISSAI.",
+  cx1_b2:"قيادة برامج مراجعة تكنولوجيا المعلومات في 12 بنكًا حكوميًا، بتقييم الضوابط العامة وضوابط تطبيقات SAP.",
+  cx1_b3:"قيادة مراجعات الأداء والامتثال لمشروعات استصلاح الأراضي القومية والهيئات العامة، المرتبطة بأهداف التنمية المستدامة 2 و7 و9 و15.",
+  cx1_b4:"إعداد المقترحات الفنية والمالية التي دعمت تعيين الجهاز مراجعًا خارجيًا للمنظمات الدولية.",
+  cx1_note:"السجل الكامل للتكليفات الدولية أدناه ↓ — راجع قسم <a href=\"#engagements\">التكليفات</a>.",
+  cx2_period:"مارس 2014 – نوفمبر 2019",
+  cx2_role:"مشرف مراجعة داخلي",
+  cx2_org:"شركة شِبْه الجزيرة للمقاولات (SAJCO)، الرياض، السعودية",
+  cx2_b1:"إدارة مهام مراجعة شاملة للمالية والمشتريات والمشروعات والموارد البشرية وتكنولوجيا المعلومات، وتحديد المخاطر المالية والتشغيلية والامتثالية والسمعية.",
+  cx2_b2:"اقتراح إجراءات محسّنة للمديونيات خفضت نسبة الديون المعدومة بنسبة 70%، وتصميم سياسة لشراء السيارات وفّرت 3 ملايين ريال سعودي.",
+  cx2_b3:"قيادة فصل قطاع الخدمات الخاصة، وتحويل خسارة قدرها 0.9 مليون ريال (2016) إلى مسار ربحية بلغ 8 ملايين ريال بحلول 2020.",
+  cx2_b4:"تقييم ضوابط نظام ERP ودعم تنفيذه، وتقديم المشورة بشأن الامتثال لضريبة القيمة المضافة وتكامل نظام المخازن الذي خفّض المخزون الراكد بنسبة 5%.",
+  cx3_period:"نوفمبر 2006 – مارس 2013",
+  cx3_role:"مراجع أول",
+  cx3_org:"الجهاز المركزي للمحاسبات، القاهرة، مصر",
+  cx3_b1:"إجراء مراجعات الأداء والامتثال لـ 12 شركة حكومية في قطاعات الكهرباء والغاز والبترول.",
+  cx3_b2:"تحليل القوائم والسجلات المالية لتحديد المخاطر وفرص التحسين.",
+
   e_eyebrow:"فهرس التكليفات",
   e_title:"المراجعة الخارجية للمنظمات الدولية",
   e1_name:"منظمة الأغذية والزراعة للأمم المتحدة (الفاو)", e1_status:"قادم",
   e1_desc:"عضو فريق المراجعة الخارجية للفاو بروما بموجب قرار رسمي، وجارٍ حاليًا مرحلة التسليم والتسلم من المراجع الخارجي السابق، الجهاز الأعلى للرقابة بالهند.",
   e1_years:"من السنة المالية 2026",
   e2_name:"منظمة الأمم المتحدة للتنمية الصناعية (اليونيدو)",
-  e2_desc:"قيادة مراجعات تكنولوجيا المعلومات (الضوابط العامة وضوابط تطبيقات SAP)، وتقييمات رقابية لمبادرات الذكاء الاصطناعي، ومراجعة القوائم المالية وفق IPSAS، ومراجعات أداء لمشروعات المنظمة، فيينا.",
+  e2_desc:"قيادة مراجعات تكنولوجيا المعلومات (الضوابط العامة وضوابط تطبيقات SAP)، وتقييمات رقابية لمبادرات الذكاء الاصطناعي، ومراجعة القوائم المالية وفق IPSAS، ومراجعات أداء لمشروعات المنظمة، بما فيها مراجعات خاصة لمشروعات مرفق البيئة العالمية وصندوق الإصلاحات الكبرى، فيينا.",
   e2_years:"السنتان الماليتان 2024–2025",
   e3_name:"مفوضية الاتحاد الأفريقي (AUC)",
   e3_desc:"تقييم ضوابط تطبيقات SAP، ومراجعة مكتب الرقابة الداخلية، ومراجعة بنود رئيسية في القوائم المالية وفق IPSAS، أديس أبابا.",
@@ -338,16 +608,57 @@ const AR = {
   e4_name:"البنوك الحكومية والمشروعات القومية — مصر",
   e4_desc:"قيادة مراجعات تكنولوجيا المعلومات لعدد 12 بنكًا حكوميًا، ومراجعات أداء والتزام وفق معايير الإيساي لمشروعات استصلاح الأراضي القومية والهيئات العامة، مرتبطة بأهداف التنمية المستدامة 2 و7 و9 و15.",
   e4_years:"2006 – حتى الآن",
-  c_eyebrow:"الإنتوساي والمنظمات الإقليمية",
-  c_title:"الإسهامات الدولية",
-  c1_tag:"مشاركة تأليف · WGITA", c1_title:"استخدام ومراجعة حلول الذكاء الاصطناعي",
-  c1_desc:"إرشادات مجموعة عمل الإنتوساي لمراجعة تكنولوجيا المعلومات حول مراجعة أنظمة الذكاء الاصطناعي الحكومية — الحوكمة ومخاطر النماذج وسلامة البيانات. 2023–2025.",
-  c2_tag:"مشاركة تأليف · WGITA", c2_title:"مراجعة الحوسبة السحابية",
-  c2_desc:"إرشادات مجموعة عمل الإنتوساي للأجهزة الرقابية حول مراجعة البيئات السحابية ونماذج تقديمها. 2023–2025.",
-  c3_tag:"متحدث · WGBD، فيتنام 2024", c3_title:"تعزيز استراتيجية إدارة البيانات بالجهاز",
-  c3_desc:"عرض في الاجتماع السنوي الثامن لمجموعة عمل الإنتوساي للبيانات الضخمة، نينه بينه.",
-  c4_tag:"متحدث · WGBD، القاهرة 2023", c4_title:"مراجعة التجارة الإلكترونية في بيئة البيانات الضخمة",
-  c4_desc:"عرض في الاجتماع السنوي السابع لمجموعة عمل البيانات الضخمة. أيضًا: مساهم في دليل الأرابوساي الشامل لمراجعة تكنولوجيا المعلومات، ومراقب في مشروع البحث الثالث عشر للأسوساي حول المراجعة عن بُعد.",
+
+  ac_eyebrow:"إنجازات مختارة",
+  ac_title:"نتائج، لا مسؤوليات فحسب",
+  ac1:"استرداد مئات الأفدنة من أراضي الدولة عبر إنفاذ شروط التخصيص، وتحصيل أكثر من 100 مليون جنيه من المستحقات المتأخرة.",
+  ac2:"عرض نتائج المراجعة في أكثر من 40 اجتماعًا سنويًا بحضور وزراء وقيادات عليا، وإعداد تقارير قطاعية سنوية رُفعت إلى البرلمان ورئاسة الجمهورية.",
+  ac3:"إعداد المقترحات الفنية والمالية التي دعمت تعيين الجهاز مراجعًا خارجيًا لثلاث منظمات دولية.",
+  ac4:"قيادة مهام مراجعة تكنولوجيا المعلومات في 12 بنكًا حكوميًا، وتعزيز بيئة الضوابط العامة وضوابط التطبيقات.",
+  ac5:"إعداد محتوى علمي وتعليمي لبرنامج اليوروساي الدولي للتعلم الإلكتروني حول مراجعة الذكاء الاصطناعي في القطاع العام.",
+  ac6:"تمثيل التجربة المصرية في مؤتمرات ومحافل فنية دولية نظّمتها الإنتوساي واليوروساي والأرابوساي.",
+
+  c_eyebrow:"الإنتوساي واليوروساي والأرابوساي",
+  c_title:"الإسهامات الدولية والمشاركات",
+  c1_tag:"متحدث · ندوة إلكترونية، مجموعة عمل تكنولوجيا المعلومات باليوروساي",
+  c1_title:"من البيانات إلى النتائج: مسارات مختصرة لرفع كفاءة الرقابة",
+  c1_desc:"عرض تجربة الجهاز في توظيف المنصات الرقمية القومية لرفع كفاءة العمل الرقابي، ممثلًا لمنطقة الأرابوساي أمام جمهور دولي.",
+  c2_tag:"متحدث · الملتقى العلمي للأرابوساي، الحمامات، تونس",
+  c2_title:"جاهزية الأجهزة العليا للرقابة لتوظيف البيانات الكبيرة والذكاء الاصطناعي",
+  c2_desc:"عرض في ملتقى «الربيع التكنولوجي» — استراتيجيات وتحديات وفرص تبني الذكاء الاصطناعي في الرقابة الحكومية.",
+  c3_tag:"متحدث · مجموعة عمل البيانات الضخمة، هاربين، الصين",
+  c3_title:"تطبيق الذكاء الاصطناعي في أنظمة إدارة الرقابة",
+  c3_desc:"عرض «الاستراتيجيات والتحديات» في الاجتماع السنوي التاسع لمجموعة عمل الإنتوساي للبيانات الضخمة، ممثلًا للجهاز المركزي للمحاسبات.",
+  c4_tag:"مشارك في التأليف · إرشادات WGITA",
+  c4_title:"استخدام ومراجعة حلول الذكاء الاصطناعي · مراجعة الحوسبة السحابية",
+  c4_desc:"إرشادات مجموعة عمل الإنتوساي لمراجعة تكنولوجيا المعلومات للأجهزة الرقابية حول مراجعة أنظمة الذكاء الاصطناعي والبيئات السحابية — الحوكمة ومخاطر النماذج وسلامة البيانات.",
+  c5_tag:"متحدث · مجموعة عمل البيانات الضخمة، نينه بينه، فيتنام",
+  c5_title:"تعزيز استراتيجية إدارة البيانات بالجهاز",
+  c5_desc:"عرض في الاجتماع السنوي الثامن لمجموعة عمل الإنتوساي للبيانات الضخمة.",
+  c6_tag:"متحدث · مجموعة عمل البيانات الضخمة، القاهرة، مصر",
+  c6_title:"مراجعة التجارة الإلكترونية في بيئة البيانات الضخمة",
+  c6_desc:"عرض في الاجتماع السنوي السابع لمجموعة عمل الإنتوساي للبيانات الضخمة.",
+  c7_tag:"مساهم · مجموعة عمل الأرابوساي لمراجعة تكنولوجيا المعلومات",
+  c7_title:"دليل شامل لمراجعة تكنولوجيا المعلومات للأجهزة العليا للرقابة",
+  c7_desc:"المساهمة في إعداد الدليل الإقليمي للأرابوساي لمراجعة تكنولوجيا المعلومات.",
+  c8_tag:"مراقب · مشروع البحث الثالث عشر للأسوساي",
+  c8_title:"المراجعة عن بُعد للأجهزة الرقابية: المستقبل والتحديات",
+  c8_desc:"المشاركة في مبادرة البحث الدولية حول ممارسات المراجعة عن بُعد.",
+  c9_tag:"ممثل · الجهاز المركزي للمحاسبات (الجهاز الأعلى للرقابة في مصر)",
+  c9_title:"مجموعات عمل الإنتوساي — WGITA وWGBD وWGISTA",
+  c9_desc:"يمثل الجهاز في الاجتماعات السنوية والندوات الفنية والندوات الإلكترونية ومبادرات البحث الدولية عبر المجموعات الثلاث.",
+
+  t_eyebrow:"بناء القدرات · مدرب معتمد من مبادرة الإنتوساي للتنمية",
+  t_title:"برامج تدريبية قدّمها لأجهزة رقابية",
+  t1:"مراجعة تكنولوجيا المعلومات", t1a:"ديوان المحاسبة الوطني بجمهورية موريشيوس (عن بُعد) — برنامج ثلاثي الأيام يغطي الضوابط العامة وإدارة الصلاحيات وإدارة التغيير والنسخ الاحتياطي والاستجابة للحوادث وضوابط التطبيقات", t1w:"أغسطس 2026",
+  t2:"الأمن السيبراني في القطاع المصرفي", t2a:"البرنامج الإقليمي للأرابوساي حول الرقابة على القطاع المصرفي (عن بُعد) — حوكمة الأمن السيبراني ومشهد التهديدات ومخاطر الخدمات المصرفية الرقمية والمتطلبات التنظيمية", t2w:"2026",
+  t3:"مراجعة الذكاء الاصطناعي في القطاع العام", t3a:"مركز البحوث والتدريب التابع لمجموعة عمل تكنولوجيا المعلومات باليوروساي — خبير موضوعي ومطوّر محتوى وكاتب نصوص ومقدّم للبرنامج التعليمي الإلكتروني الدولي", t3w:"2025–2026",
+  t4:"إدارة مخاطر الاحتيال وفق إطار COSO 2023", t4a:"الجهاز المركزي للمحاسبات، القاهرة — ورشة عمل مدتها يومان حول الحوكمة والتقييم والمنع والاكتشاف والتحقيق والإجراءات التصحيحية", t4w:"أكتوبر 2025",
+  t5:"الوقاية من الفساد واكتشافه", t5a:"أعضاء الجهاز، القاهرة", t5w:"نوفمبر 2024",
+  t6:"الرقابة على ضوابط التطبيقات", t6a:"ديوان المحاسبة القطري والوكالة الوطنية للأمن السيبراني، الدوحة", t6w:"سبتمبر 2024",
+  t7:"الطرق الحديثة في الرقابة على النظم المعلوماتية", t7a:"أعضاء من 16 جهازًا رقابيًا عربيًا، الأرابوساي، القاهرة", t7w:"يوليو 2024",
+  t8:"ممارسات مراجعة الأداء — معايير ISSAI 300 و3000", t8a:"ديوان المراجعة بجنوب السودان", t8w:"أغسطس 2022",
+
   cr_eyebrow:"الشهادات المهنية", cr_title:"الاعتمادات",
   cr1:"الشهادة المتقدمة في مراجعة الذكاء الاصطناعي — ISACA",
   cr2:"شهادة معايير المحاسبة الدولية للقطاع العام — ACCA",
@@ -355,17 +666,33 @@ const AR = {
   cr4b:"IDI ToT", cr4:"مدرب معتمد — مبادرة الإنتوساي للتنمية",
   cr5:"فاحص احتيال معتمد — ACFE",
   cr6:"مراجع داخلي معتمد — IIA",
-  cr_note:"يدرس حاليًا ماجستير تحليل البيانات والذكاء الاصطناعي. عضو: جمعية المحاسبين والمراجعين المصرية (منذ 2014)، وISACA، وIIA، وACFE.",
-  t_eyebrow:"بناء القدرات", t_title:"برامج تدريبية قدّمها لأجهزة رقابية",
-  t1:"الوقاية من الفساد واكتشافه", t1a:"أعضاء الجهاز، القاهرة", t1w:"نوفمبر 2024",
-  t2:"الرقابة على ضوابط التطبيقات", t2a:"ديوان المحاسبة القطري والوكالة الوطنية للأمن السيبراني، الدوحة", t2w:"سبتمبر 2024",
-  t3:"الطرق الحديثة في الرقابة على النظم المعلوماتية", t3a:"أعضاء من 16 جهازًا رقابيًا عربيًا، القاهرة", t3w:"يوليو 2024",
-  t4:"ممارسات مراجعة الأداء", t4a:"ديوان المراجعة بجنوب السودان", t4w:"أغسطس 2023",
+
+  ed_title:"المؤهلات العلمية",
+  ed1_degree:"ماجستير تحليل البيانات والذكاء الاصطناعي (تحت الدراسة)",
+  ed1_school:"جامعة شتاينبايس، ألمانيا",
+  ed2_degree:"بكالوريوس المحاسبة والمراجعة",
+  ed2_school:"كلية التجارة، جامعة القاهرة، 2005 — بتقدير جيد جدًا مع مرتبة الشرف",
+  mem_title:"العضويات المهنية",
+  mem_body:"جمعية المحاسبين والمراجعين المصرية — ESAA (منذ 2014) · ISACA · معهد المراجعين الداخليين (IIA) · جمعية فاحصي الاحتيال المعتمدين (ACFE)",
+
+  rpd_title:"التطوير المهني الحديث",
+  rpd1:"تحليل البيانات وMicrosoft Copilot — معهد نظم المعلومات بالقوات المسلحة، 2026",
+  rpd2:"برنامج سفراء الذكاء الاصطناعي — المعهد القومي للاتصالات، 2026",
+  rpd3:"الذكاء الاصطناعي التوليدي في التمويل — CFTE والمعهد المصرفي المصري، 2024–25",
+  rpd4:"مراجعة الحكومة الإلكترونية — ديوان المراقبة العامة، السعودية، 2023",
+  rpd5:"المراجعة وتحليل البيانات باستخدام Excel وPower BI — الجهاز المركزي للمحاسبات، 2023",
+  rpd6:"مراجعة نظام SAP — أكاديمية مصر للطيران للتدريب، 2022",
+  rpd7:"استشاري SAP FI — SAP مصر، 2021",
+
+  lang_title:"اللغات —",
+  lang_body:"العربية (اللغة الأم) · الإنجليزية (إجادة مهنية)",
+
   ct_eyebrow:"تواصل", ct_title:"تأكيد موثوقية، استشارات، أو بناء قدرات — لنتحدث.",
+  ct_loc:"مقيم في القاهرة، مصر — بتكليفات ممتدة إلى فيينا وروما والمنطقة.",
   f_left:"© 2026 مصطفى معروف — MostafaMaarof.com", f_right:"القاهرة · فيينا · روما"
 };
 const EN = {};
-document.querySelectorAll('[data-i18n]').forEach(el => { EN[el.dataset.i18n] = el.textContent; });
+document.querySelectorAll('[data-i18n]').forEach(el => { EN[el.dataset.i18n] = el.innerHTML; });
 
 let lang = 'en';
 const btn = document.getElementById('langToggle');
@@ -373,7 +700,7 @@ btn.addEventListener('click', () => {
   lang = lang === 'en' ? 'ar' : 'en';
   const dict = lang === 'ar' ? AR : EN;
   document.querySelectorAll('[data-i18n]').forEach(el => {
-    if (dict[el.dataset.i18n] !== undefined) el.textContent = dict[el.dataset.i18n];
+    if (dict[el.dataset.i18n] !== undefined) el.innerHTML = dict[el.dataset.i18n];
   });
   document.documentElement.lang = lang;
   document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
@@ -382,6 +709,17 @@ btn.addEventListener('click', () => {
     ? 'مصطفى معروف — مراجعة تكنولوجيا المعلومات والذكاء الاصطناعي'
     : 'Mostafa Maarof — IT Audit & AI Auditing | Supreme Audit Institutions';
 });
+
+if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObserver' in window) {
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) { entry.target.classList.add('in'); io.unobserve(entry.target); }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+} else {
+  document.querySelectorAll('.reveal').forEach(el => el.classList.add('in'));
+}
 </script>
 </body>
 </html>
